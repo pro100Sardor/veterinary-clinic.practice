@@ -88,6 +88,8 @@ body {
 
 
 /*===== HEADER part styles started =====*/
+
+/*===== HEADER part FIRST SECTION styles started =====*/
 .header-first-section {
   background-color: #e5e5e5;
 }
@@ -99,13 +101,170 @@ body {
   flex-wrap: wrap;
 }
 
+.header-first-container {
+  padding-left: 215px;
+}
+
 .header-container > *:not(:last-child){
   margin-right: 50px;
 }
 
-.header-address::before, .footer-address::before {
-  content:
+.header-address, .footer-address {
+  display: flex;
+  align-items: center;
 }
+
+.header-address::before, .footer-address::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-image: url("../img/vector.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-right: 10px;
+  /* since the element in the pseudo was flex-child, it was not given a display feature */
+}
+
+.header-hotlines-wrapper {
+  display: flex;
+}
+
+.header-hotlines-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #333333;
+  margin-right: 10px;
+}
+
+.header-first-hotlines::before, .header-second-hotlines::before, .header-third-hotlines::before {
+  content: "";
+  margin-right: 10px;
+  /* since the element in the pseudo was flex-child, it was not given a display feature */
+}
+
+.header-first-hotlines::before {
+  width: 13px;
+  height: 13px;
+  background-image: url("../img/phone.png");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.header-second-hotlines::before, .header-third-hotlines::before {
+  width: 4px;
+  height: 4px;
+  background-color: #ffc351;
+  border-radius: 50%;
+}
+
+.working-time {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.working-time::before {
+  content: "";
+  width: 12px;
+  height: 14px;
+  margin: 10px;
+  background-image: url("../img/schedule.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* since the element in the pseudo was flex-child, it was not given a display feature */
+}
+
+.regular-working-days {
+  margin-right: 17px;
+}
+
+.week-days {
+  font-weight: 700;
+}
+/*===== HEADER part FIRST SECTION styles ended =====*/
+
+/*===== HEADER part SECOND SECTION styles started =====*/
+.header-second-section {
+  background-color: #fff;
+}
+
+.site-logo-link {
+  position: relative;
+  z-index: 1;
+}
+
+.site-logo-image {
+  /* position: absolute;
+  z-index: 1; */
+  display: block;
+  width: 158px;
+  height: 77px;
+  transform: scale(1.1);
+  transition: opacity 0.2s ease;
+}
+
+.site-logo-image:hover {
+  opacity:  0.8;
+}
+
+.site-logo-image:active {
+  opacity:  0.6;
+}
+
+.features-list {
+  list-style-type: none;
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.features-link {
+  display: flex;
+  align-items: center;
+  padding: 19px 27px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+  transition: background-color 0.2s ease,
+  opacity 0.2s ease;
+}
+
+.features-link:hover {
+  background-color: #ffc351;
+}
+
+.features-link:active {
+  opacity: 0.7;
+}
+
+.active::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin-right: 12px;
+  background-image: url("../img/active.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  /* since the element in the pseudo was flex-child, it was not given a display feature */
+}
+
+/*===== HEADER part SECOND SECTION styles ended =====*/
+
+
+/*===== HEADER part FIRST SECTION styles started =====*/
 
 .address {
   font-style: normal;
@@ -145,6 +304,22 @@ only screen and (                min-resolution: 2dppx) {
 
   body {
     background-image: url("../img/bg@2x.jpg");
+  }
+
+  .header-address::before, .footer-address::before {
+    background-image: url("../img/vector@2x.png");
+  }
+
+  .header-first-hotlines::before {
+    background-image: url("../img/phone@2x.png");
+  }
+
+  .working-hours::before {
+    background-image: url("../img/schedule@2x.png");
+  }
+
+  .active::before {
+    background-image: url("../img/active@2x.png");
   }
 
 }
