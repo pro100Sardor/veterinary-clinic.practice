@@ -48,6 +48,22 @@ html {
 
 body {
   font-family: "Futura PT", "Arial", sans-serif;
+  background-color: #fff;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header, .site-footer {
+  flex-shrink: 0;
+}
+
+.site-main {
+  flex-grow: 1;
 }
 
 .visually-hidden {
@@ -55,15 +71,15 @@ body {
   width: 1px;
   height: 1px;
   border: 0;
-  padding: 0;
   margin: -1px;
   clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
-  max-width: ;
-  padding-left: ;
-  padding-right: ;
+  max-width: 1350px;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -72,6 +88,28 @@ body {
 
 
 /*===== HEADER part styles started =====*/
+.header-first-section {
+  background-color: #e5e5e5;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-container > *:not(:last-child){
+  margin-right: 50px;
+}
+
+.header-address::before, .footer-address::before {
+  content:
+}
+
+.address {
+  font-style: normal;
+}
 /*===== HEADER part srtyes ended =====*/
 
 
@@ -94,3 +132,19 @@ body {
 
 /*===== HEADER part styles started =====*/
 /*===== HEADER part styles ended =====*/
+
+
+/*===== The section for background images retina screens =====*/
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+
+  body {
+    background-image: url("../img/bg@2x.jpg");
+  }
+
+}
