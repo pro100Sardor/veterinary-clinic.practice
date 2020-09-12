@@ -261,6 +261,39 @@ body {
   /* since the element in the pseudo was flex-child, it was not given a display feature */
 }
 
+.question-button {
+  display: flex;
+  align-items: center;
+  padding: 22px 28px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: right;
+  color: #333333;
+}
+
+.question-button::before {
+  content: "";
+  width: 23px;
+  height: 21px;
+  margin-right: 5px;
+  background-image: url("../img/pet.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  transition: background-color 0.2s ease,
+  opacity 0.2s ease;
+}
+
+.question-button:hover {
+  background-color: #333333;
+  color: #fff;
+}
+
+.question-button:active {
+  opacity: 0.6;
+}
+
 /*===== HEADER part SECOND SECTION styles ended =====*/
 
 
@@ -322,4 +355,7 @@ only screen and (                min-resolution: 2dppx) {
     background-image: url("../img/active@2x.png");
   }
 
+  .question-button::before {
+    background-image: url("../img/pet@2x.png");
+  }
 }
