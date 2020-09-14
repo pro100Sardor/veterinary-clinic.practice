@@ -109,21 +109,26 @@ body {
   margin-right: 50px;
 }
 
-.header-address, .footer-address {
+.header-address {
   display: flex;
   align-items: center;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .header-address::before, .footer-address::before {
   content: "";
-  width: 14px;
-  height: 14px;
+  margin-right: 10px;
   background-image: url("../img/vector.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
-  margin-right: 10px;
   /* since the element in the pseudo was flex-child, it was not given a display feature */
+}
+
+.header-address::before {
+  width: 14px;
+  height: 14px;
 }
 
 .header-hotlines-wrapper {
@@ -139,6 +144,7 @@ body {
   line-height: 18px;
   color: #333333;
   margin-right: 10px;
+  white-space: nowrap;
 }
 
 .header-first-hotlines::before, .header-second-hotlines::before, .header-third-hotlines::before {
@@ -203,13 +209,9 @@ body {
 }
 
 .site-logo-image {
-  /* position: absolute;
-  z-index: 1; */
   display: block;
   width: 158px;
-  height: 77px;
-  transform: scale(1.1);
-  transition: opacity 0.2s ease;
+  height: 76px;
 }
 
 .site-logo-image:hover {
@@ -218,6 +220,13 @@ body {
 
 .site-logo-image:active {
   opacity:  0.6;
+}
+
+.site-logo-image-header {
+  position: absolute;
+  z-index: 1;
+  transform: scale(1.1);
+  transition: opacity 0.2s ease;
 }
 
 .features-list {
@@ -301,6 +310,8 @@ body {
 
 .address {
   font-style: normal;
+  font-weight: 500;
+  color: #333333;
 }
 /*===== HEADER part srtyes ended =====*/
 
@@ -310,20 +321,220 @@ body {
 /*===== FIRST SECTION styles started =====*/
 /*===== FIRST SECTION styles ended =====*/
 
+
 /*===== SECOND SECTION styles started =====*/
 /*===== SECOND SECTION styles ended =====*/
+
 
 /*===== THIRD SECTION styles started =====*/
 /*===== THIRD SECTION styles ended =====*/
 
-/*===== FOURTH SECTION styles ended =====*/
+
 /*===== FOURTH SECTION styles started =====*/
+/*===== FOURTH SECTION styles ended =====*/
+
+
+/*===== FIFTH SECTION styles started =====*/
+/*===== FIFTH SECTION styles ended =====*/
+
+
+/*===== SIXTH SECTION styles started =====*/
+
+.feedback-section {
+  display: flex;
+  margin-top: 265px;
+  margin-bottom: 247px;
+  background-image: url("../img/feedback.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.map-link, .map-image {
+  width: 462px;
+  height: 652px;
+}
+
+.map-image {
+  display: block;
+  object-fit: cover;
+}
+
+.feedback-box {
+ margin-left: 166px;
+ margin-top: 62px;
+ width: 375px;
+ color: #fff;
+}
+
+.feedback-title {
+  font-size: 48px;
+  line-height: 62px;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.feedback-description {
+  font-size: 16px;
+  line-height: 20px;
+  color: #949494;
+  margin-top: 0;
+  margin-bottom: 29px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-add-field {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 22px;
+  margin-bottom: 14px;
+}
+
+.feedback-message-fild {
+  height: 165px;
+  margin-bottom: 30px;
+  resize: none;
+  padding: 17px 22px;
+}
+
+/*===== SIXTH SECTION styles ended =====*/
 
 /*===== MAIN part styles ended =====*/
 
 
-/*===== HEADER part styles started =====*/
-/*===== HEADER part styles ended =====*/
+/*===== FOOTER part styles started =====*/
+.site-footer {
+  background-color: #e5e5e5;
+  padding-top: 54px;
+  padding-bottom: 23px;
+}
+
+.footer-sub-container {
+  display: flex;
+}
+
+.features-list-footer-wrapper {
+  display: flex;
+  min-width: 288px;
+  margin-left: 67px;
+}
+
+.features-list-footer {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.features-list-footer:first-of-type {
+  margin-right: 87px;
+}
+
+.features-item-footer:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.features-link-footer {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px; /*har ehtimolga qarshi*/
+  line-height: 21px;
+  color: #333333;
+  transition: opacity 0.2s ease;
+}
+
+.features-link-footer:hover {
+  opacity: 0.8;
+}
+
+.features-link-footer:active {
+  opacity: 0.6;
+}
+
+.working-time-wrapper {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 127px;
+}
+
+.working-time-wrapper::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-right: 14px;
+  background-image: url("../img/schedule.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* since the element in the pseudo was flex-child, it was not given a display feature */
+}
+
+.working-time-footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  min-width: 122px;
+}
+
+.footer-address {
+  display: flex;
+  align-items: flex-start;
+  font-size: 16px;
+  line-height: 21px;
+  margin-left: 112px;
+  min-width: 157px;
+}
+
+.footer-address::before {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-hotlines-wrapper {
+  display: flex;
+  margin-left: 87px;
+}
+
+.footer-hotlines-wrapper::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-right: 9px;
+  background-image: url("../img/phone.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.footer-hotlines-sub-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-hotlines-link {
+  white-space: nowrap;
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  color: #333333;
+  text-decoration: none;
+}
+
+.copyright-footer {
+  text-align: right;
+}
+/*===== FOOTER part styles ended =====*/
 
 
 /*===== The section for background images retina screens =====*/
@@ -357,5 +568,13 @@ only screen and (                min-resolution: 2dppx) {
 
   .question-button::before {
     background-image: url("../img/pet@2x.png");
+  }
+
+  .working-time-wrapper::before {
+    background-image: url("../img/schedule@2x.png");
+  }
+
+  .footer-hotlines-wrapper::before {
+    background-image: url("../img/phone@2x.png");
   }
 }

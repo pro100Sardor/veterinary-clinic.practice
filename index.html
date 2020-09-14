@@ -9,8 +9,9 @@
   <link rel="icon" href="./img/logo.ico" type="image/x-icon">
 
   <!--===== link to the page section =====-->
-  <link rel="stylesheet" href="./css/normalize.css">
-  <link rel="stylesheet" href="./css/styles.css">
+  <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+  <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+  <link rel="stylesheet" href="./css/styles.min.css">
 </head>
 <body>
 
@@ -38,7 +39,7 @@
     <section class="header-second-section">
       <div class="container header-container">
         <a class="site-logo-link" href="#">
-          <img class="site-logo-image" src="./img/logo.png" srcset="./img/logo.png 1x, ./img/logo@2x.png 2x" alt="Логотип сайта 'VET'" width="158" height="77">
+          <img class="site-logo-image site-logo-image-header" src="./img/logo.png" srcset="./img/logo.png 1x, ./img/logo@2x.png 2x" alt="Логотип сайта 'VET'" width="158" height="77">
         </a>
         <ul class="features-list">
           <li class="features-item">
@@ -87,10 +88,11 @@
     <!--===== MAIN part SECOND SECTION started =====-->
     <section>
       <div class="container">
+        <h2 class="visually-hidden">отзывы главного врача о клинике</h2>
         <div>
           <blockquote>Наша ветеринарная клиника готова уделить максимум внимания Вам и Вашему питамцу. Здоровье и благополучие Ваших животных очень важно для нас и мы стремимся оказать наилучшую возможную ветеринарную помощь.</blockquote>
         </div>
-        <h4>Оржоникидзевская Ветеринарная клиника</h4>
+        <p>Оржоникидзевская Ветеринарная клиника</p>
       </div>
     </section>
     <!--===== MAIN part SECOND SECTION ended =====-->
@@ -166,7 +168,7 @@
         <h2>Будь в курсе событий</h2>
         <form action="https://htmlacademy.ru" method="POST">
           <label class="visually-hidden" for="user_email_from_be_know_section">пожалуйста, введите свой адрес электронной почты, чтобы получать информацию о процессе</label>
-          <input type="email" name="user_email_from_be_know_section" placeholder="Укажите Ваш email адрес" id="user_email_from_be_know_section" spellcheck="false" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$">
+          <input type="email" name="user_email_from_be_know_section" placeholder="Укажите Ваш email адрес" id="user_email_from_be_know_section" spellcheck="false" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" required>
           <button type="submit" name="submit" value="submit"></button>
           <!-- buttonga name va value berilganligini sababi, input maydoniga kiritilgan ma"lumotni validatsiya qilinadigan pagega qachonki inputning namesidagi value submit bo"lsagina kira olishi uchun, agar manzillar qatoriga validatorni sahifasi chaqirib kirilmoqchi bo"lsa name va value bo"lmaganligi uchun u sahifani foydalanuvchiga ochmaydi, faqat submit buttonni nomi va unda ko"rsatilgan qiymat bo"lsagina keyin validator sahifasiga kirish mumkun. -->
         </form>
@@ -206,26 +208,26 @@
     <!--===== MAIN part FIFTH SECTION ended =====-->
 
     <!--===== MAIN part SIXTH SECTION started =====-->
-    <section>
+    <section class="feedback-section">
 
-      <a href="https://www.google.com/maps/d/viewer?msa=0&mid=1no4tePW4V_nqYYGRTI59GpHoKq4&ll=21.42251500000001%2C39.826201&z=17" target="_blank">
+      <a class="map-link" href="https://www.google.com/maps/d/viewer?msa=0&mid=1no4tePW4V_nqYYGRTI59GpHoKq4&ll=21.42251500000001%2C39.826201&z=17" target="_blank">
         <img src="./img/map.jpg" srcset="./img/map.jpg 1x, ./img/map@2x.jpg 2x" alt="адрес">
       </a>
 
-      <div class="">
-        <h2>Обратная связь</h2>
-        <p>При возникновении вопросов по поводу работы клиники или консультаций, заполните форму ниже:</p>
+      <div class="feedback-box">
+        <h2 class="feedback-title">Обратная связь</h2>
+        <p class="feedback-description">При возникновении вопросов по поводу работы клиники или консультаций, заполните форму ниже:</p>
 
-        <form action="https://htmlacademy.ru" method="POST">
+        <form class="feedback-form" action="https://htmlacademy.ru" method="POST">
 
           <label class="visually-hidden" for="user_name_from_feedback_section">Введите ваше имя</label>
-          <input type="text" name="user_name_from_feedback_section" id="user_name_from_feedback_section" placeholder="Ваше имя" spellcheck="false" pattern="[A-Za-']{3}" aria-label="пожалуйста, не вводите имя, состоящее менее чем из 3 букв">
+          <input class="feedback-add-field" type="text" name="user_name_from_feedback_section" id="user_name_from_feedback_section" placeholder="Ваше имя" spellcheck="false" pattern="[A-Za-']{3}" aria-label="пожалуйста, не вводите имя, состоящее менее чем из 3 букв" required>
 
           <label class="visually-hidden" for="user_email_from_feedback_section">Введите ваше имя</label>
-          <input type="email" name="user_email_from_feedback_section" placeholder="Email для обратной связи" id="user_email_from_feedback_section" spellcheck="false" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$">
+          <input class="feedback-add-field" type="email" name="user_email_from_feedback_section" placeholder="Email для обратной связи" id="user_email_from_feedback_section" spellcheck="false" pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$" required>
 
           <label class="visually-hidden" for="user_message_from_feedback_section">Опишите Ваш вопрос.</label>
-          <textarea name="user_message_from_feedback_section" id="user_message_from_feedback_section" placeholder="Опишите Ваш вопрос." spellcheck="false"></textarea>
+          <textarea class="feedback-message-fild" name="user_message_from_feedback_section" id="user_message_from_feedback_section" placeholder="Опишите Ваш вопрос." spellcheck="false"></textarea>
 
           <button type="submit" name="submit" value="submit">Задать нам вопрос</button>
 
@@ -241,38 +243,53 @@
   <!--===== FOOTER part of the page STARTED=====-->
   <footer class="site-footer">
     <div class="container">
-      <a class="site-logo-link" href="#">
-        <img class="site-logo-image" src="./img/logo.png" srcset="./img/logo.png 1x, ./img/logo.png 2x" alt="Логотип сайта 'VET'" width="158" height="77" >
-      </a>
-      <ul>
-        <li>
-          <a href="#">Главная</a>
-        </li>
-        <li>
-          <a href="#">О Клинике</a>
-        </li>
-        <li>
-          <a href="#">Наши Услуги</a>
-        </li>
-        <li>
-          <a href="#">Полезные Статьи</a>
-        </li>
-        <li>
-          <a href="#">FAQ</a>
-        </li>
-        <li>
-          <a href="#">Контакты</a>
-        </li>
-      </ul>
-      <p>
-        <span>Пн - Пт 8:00 - 18:00</span>
-        <span>Сб - Вс 8:00 - 14:00</span>
-      </p>
-      <address class="address">г. Мариуполь, проспект Победы, 48а</address>
-      <a href="tel:067-634-75-74">(067) 634 - 75 - 74</a>
-      <a href="tel:0637-57-01-31">(0637) 57 - 01 - 31</a>
-      <a href="tel:098-266-43-89">(098) 266 - 43 - 89</a>
-      <p>&copy; 2020 example. All Rights Reserved.</p>
+      <div class="footer-sub-container">
+        <a class="site-logo-link" href="#">
+          <img class="site-logo-image" src="./img/logo.png" srcset="./img/logo.png 1x, ./img/logo.png 2x" alt="Логотип сайта 'VET'" width="158" height="76" >
+        </a>
+        <div class="features-list-footer-wrapper">
+          <ul class="features-list-footer">
+            <li class="features-item-footer">
+              <a class="features-link-footer" href="#">Главная</a>
+            </li>
+            <li class="features-item-footer">
+              <a class="features-link-footer" href="#">О Клинике</a>
+            </li>
+            <li class="features-item-footer">
+              <a class="features-link-footer" href="#">Наши Услуги</a>
+            </li>
+          </ul>
+          <ul class="features-list-footer">
+            <li class="features-item-footer">
+              <a class="features-link-footer" href="#">Полезные Статьи</a>
+            </li>
+            <li class="features-item-footer">
+              <a class="features-link-footer" href="#">FAQ</a>
+            </li>
+            <li class="features-item-footer">
+              <a class="features-link-footer" href="#">Контакты</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="working-time-wrapper">
+          <p class="working-time-footer">
+            <span><span class="week-days">Пн - Пт</span> 8:00 - 18:00</span>
+            <span><span class="week-days">Сб - Вс</span> 8:00 - 14:00</span>
+          </p>
+        </div>
+
+        <address class="address footer-address">г. Мариуполь, проспект Победы, 48а</address>
+
+        <div class="footer-hotlines-wrapper">
+          <div class="footer-hotlines-sub-wrapper">
+            <a class="footer-hotlines-link" href="tel:067-634-75-74">(067) 634 - 75 - 74</a>
+            <a class="footer-hotlines-link" href="tel:0637-57-01-31">(0637) 57 - 01 - 31</a>
+            <a class="footer-hotlines-link" href="tel:098-266-43-89">(098) 266 - 43 - 89</a>
+          </div>
+        </div>
+      </div>
+      <p class="copyright-footer">&copy; 2020 example. All Rights Reserved.</p>
     </div>
   </footer>
   <!--===== FOOTER part of the page ENDED=====-->
